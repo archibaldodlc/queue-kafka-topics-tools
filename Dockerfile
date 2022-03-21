@@ -4,9 +4,9 @@ MAINTAINER RunAbove <contact@runabove.com>
 
 RUN apk --update add ca-certificates wget bash openjdk8-jre python2 py2-pip && \
 	rm -rf /var/cache/apk && \
-	wget -q http://www.eu.apache.org/dist/kafka/0.10.1.1/kafka_2.11-0.10.1.1.tgz -O /tmp/kafka.tgz && \
+	wget -q https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz -O /tmp/kafka.tgz && \
 	mkdir -p /opt && tar -xzf /tmp/kafka.tgz -C /opt && \
-	mv /opt/kafka_2.11-0.10.1.1 /opt/kafka && \
+	mv /opt/kafka_2.13-3.1.0 /opt/kafka && \
 	rm /tmp/kafka.tgz && \
 	pip install --upgrade pip kafka-tools
 
